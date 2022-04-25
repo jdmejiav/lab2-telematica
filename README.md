@@ -1,5 +1,10 @@
 # lab2-telematica
 
+## Link FrontEnd.
+
+<a href="https://lab2.jdmejiav.tk">lab2.jdmejiav.tk</a>
+
+
 ## FrontEnd.
 Para el despligue del sitio web con certificado SSL y docker, lo que hice fue desplegar el sitio web con docker en el puerto 8080 e instalar y configurar nginx en local para que redirigiera todo el tráfico http y https a ese puerto.
 
@@ -10,7 +15,7 @@ En el archivo del package.json, cambié la dirección del back de localhost a la
 ### Pasos
 
 #### 1.
-Necesité adquirir un dominio en Freenom, el cuál fue: <a href="https://lab2.jdmejiav.tk">lab2.jdmejiav.tk</a> 
+Necesité adquirir un dominio en Freenom, el cuál fue: <a href="https://lab2.jdmejiav.tk">lab2.jdmejiav.tk</a>.
 
 #### 2.
 Para activar el certificado.
@@ -35,10 +40,11 @@ Reiniciar el servicio de nginx para actualizar los cambios en la configuración.
 
       sudo systemctl restart nginx
 
-## Ver resultado
-
 ## Backend.
 Para desplegar el Backend, fue necesario habilitar en AWS la conexión con el Frontend en el grupo de seguridad por el puerto 5000, también fue necesario modificar el archivo .env para póner la URl de la base de datos desplegada en otra instancia EC2.
 
 Lo desplegué utilizando docker corriendo en el puerto 5000 de la máquina virtual
+
+## Mongo
+Para desplegar la base de datos en MongoDB, utlicé una instancia EC2 en AWS diferente y en esta instalé MongoDB con la configuración estándar. Edité el grupo de seguridad de la instancia para permitir el tráfico TCP desde la instancia del backend
 
